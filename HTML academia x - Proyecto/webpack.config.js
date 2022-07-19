@@ -1,22 +1,20 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-/* const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin') */
-const TerserPlugin = require('terser-webpack-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     entry: ['./index.js'],
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: 'assets/[hash] [ext] [query]'
-
+        assetModuleFilename: 'assets/[hash][ext][query]'
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: "[name].[hash].css" }),
-        new CleanWebpackPlugin (),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({ template: './index.html' })
     ],
     module: {
@@ -26,7 +24,7 @@ module.exports = {
                 use: ["html-loader"]
             },
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -45,6 +43,7 @@ module.exports = {
         minimizer: [
             new CssMinimizerPlugin(),
             new TerserPlugin()
-        ],
-    }
+        ]
+    },
+
 }
