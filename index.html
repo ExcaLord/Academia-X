@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mateo Cabrera | Portafolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <!-- calling the style normalize.css installed with npm -->
+    <!-- <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/eins-modal/dist/css/eins-modal.min.css"> -->
+    <!-- Normalize from cdn -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img class="circle" src="assets/large.png" alt="large logo" />
+        <h1>Mateo Cabrera</h1>
+        <hr />
+        <h2>Software Engineer</h2>
+        <video autoplay loop muted>
+            <source src="assets/hero.mp4" />
+        </video>
+    </header>
+    <nav id="navbar">
+        <div>
+            <a href="/">
+                <img class="circle" src="assets/small.png" alt="small logo">
+                <span>Mateo Cabrera <small>Software Engineer</small></span>
+            </a>
+            <button id="hamburguer">☰</button>
+        </div>
+        <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skillset">Skillset</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="portfolio"> 
+            <h3>Portfolio</h3>
+            <hr />
+            <div>
+                <button>
+                    <img src="assets/1.png">
+                    <h4>Fleet Management System</h4>
+                </button>
+                <button>
+                    <img src="assets/2.png">
+                    <h4>Nintendo Disney Art Academy</h4>
+                </button>
+                <button>
+                    <img src="assets/3.png">
+                    <h4>Fridge Binge Games</h4>
+                </button>
+            </div>
+        </section>
+        <section id="skillset" class="even">
+            <h3>Skillset</h3>
+            <hr />
+            <div>
+                <div>
+                    <img src="assets/html.svg" alt="html">
+                    <span class="tooltip">HTML</span>
+                </div>
+                <div>
+                    <img src="assets/css.svg" alt="css">
+                    <span class="tooltip">CSS</span>
+                </div>
+                <div>
+                    <img src="assets/js.svg" alt="js">
+                    <span class="tooltip">JavaScript</span>
+                </div>
+                <div>
+                    <img src="assets/git.svg" alt="git">
+                    <span class="tooltip">GIT</span>
+                </div>
+                <div>
+                    <img src="assets/npm.svg" alt="npm">
+                    <span class="tooltip">npm</span>
+                </div>
+                <div>
+                    <img src="assets/bash.svg" alt="bash">
+                    <span class="tooltip">Bash</span>
+                </div>
+                <div>
+                    <img src="assets/node.svg" alt="node">
+                    <span class="tooltip">Node.Js</span>
+                </div>
+                <div>
+                    <img src="assets/react.svg" alt="react">
+                    <span class="tooltip">React</span>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <h3>Experience</h3>
+            <hr />
+            <div>
+                <a data-modal-id="myModal">
+                    <img src="assets/1.svg">
+                    <h4>Nintendo @ Enter The Studio</h4>
+                </a>
+                <a>
+                    <img src="assets/2.svg">
+                    <h4>Google Maps @ Randstad</h4>
+                </a>
+                <a>
+                    <img src="assets/3.svg">
+                    <h4>Fresh Consulting LLC</h4>
+                </a>
+                <a>
+                    <img src="assets/4.svg">
+                    <h4>Amazon LLC</h4>
+                </a>
+            </div>
+        </section>
+        <section id="contact" class="even">
+            <h3>Contact</h3>
+            <hr />
+            <form action="https://formspree.io/f/mwkyjbgl" method="POST">
+                <label>
+                Your email:
+                <input type="email" name="email">
+                </label>
+                <label>
+                Your message:
+                <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                    <button type="submit">Send</button>
+                </form>
+                <nav id="social-media">
+                    <a href="https://www.linkedin.com/in/mateo-cabrera-78a294240/">
+                        <img id="linkedin" src="assets/linkedin.png">
+                    </a>
+                    <a href="https://github.com/ExcaLord">
+                        <img id="github" src="assets/github.png">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLwEaVBH-rVEELuHiCyPQ5Q">
+                        <img id="youtube" src="assets/youtube.png">
+                    </a>
+                </nav>
+        </section>
+    </main>
+    <footer>
+        <small>Developed and designed by Mateo Cabrera. &copy;2022. All rights reserved.</small>
+    </footer>
+    <!-- Modal -->
+    <div id="myModal" class="eins-modal">
+        <div class="eins-modal-content">
+            <div class="eins-modal-close"></div>
+  
+            <!-- Your Content -->
+            Mi Primer Trabajo!
+            <button class="eins-modal-close-button">OK</button>
+      
+        </div>
+    </div>
+</body>
+</html>
